@@ -8,11 +8,11 @@ Shots-URL is an url shortener application build in Python by Tkinter. It is my v
 
 <br>
 
-![Updated version](https://raw.githubusercontent.com/Kumara2mahe/shots_url/main/Preview-Images/updated_preview.png)
+[Updated version](https://raw.githubusercontent.com/Kumara2mahe/shots_url/main/Preview-Images/updated_preview.png)
 
 <br>
 
-![Previous version](https://raw.githubusercontent.com/Kumara2mahe/shots_url/main/Preview-Images/old_preview.png)
+[Previous version](https://raw.githubusercontent.com/Kumara2mahe/shots_url/main/Preview-Images/old_preview.png)
 
 <br>
 
