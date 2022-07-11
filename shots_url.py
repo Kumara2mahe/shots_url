@@ -9,6 +9,9 @@ from tkinter import messagebox
 import random
 import string
 
+# Importing from Pillow module to display a image as background
+from PIL import ImageTk, Image
+
 root = Tk()
 # Giving Title to the root window
 root.title("Shots-URL")
@@ -69,8 +72,8 @@ def create_custom_copy():
 # Function which is triggered by the entry_label3 and this creates a string of giving hint to the user what to type inside it
 def label_custom(event):
     label3 = Label(root, text="( eg : https://Shots_URL.in/ABCDF , you can get this by type 'Shots_URL.in' ", font=(
-        "montserrat", 8, "bold", "italic"), background="#C9DAEA", foreground="#22333B")
-    label3.place(relx=0.38, rely=0.95, anchor=S)
+        "montserrat", 8, "bold", "italic"), background="#00001a", foreground="#F8FFE5")
+    label3.place(relx=0.45, rely=0.95, anchor=S)
 
 
 # Function which is triggered by the shots_button
@@ -96,7 +99,7 @@ def clear_entry_label1():
 def clear(event):
     # Creating some strings, showing information
     label3 = Label(root, text="( eg : https://Shots_URL.in )", font=(
-        "montserrat", 8, "bold", "italic"), background="#C9DAEA", foreground="#22333B")
+        "montserrat", 8, "bold", "italic"), background="#00001a", foreground="#CCDDD3")
     label3.place(x=245, y=20)
     label3.after(20000, label3.destroy)
 
@@ -132,14 +135,23 @@ window_background = Canvas(root, width=600, height=400, bg="#C9DAEA")
 window_background.grid()
 
 
+# Replacing the background color with a image
+img = Image.open(
+    "background.jpg")
+img = img.resize((600, 400), Image.Resampling.LANCZOS)
+img = ImageTk.PhotoImage(img)
+window_background.create_image(0, 0, anchor=NW,
+                               image=img)
+
+
 # Creating labels using Label class and position it with one of the geometry management method
 label1 = Label(root, text="paste your 'url' here", font=(
-    "montserrat", 14, "bold", "italic"), background="#C9DAEA", foreground="#22333B")  # montserrat,caveat
+    "montserrat", 14, "bold", "italic"), background="#00001a", foreground="#CCDDD3")  # montserrat,caveat
 label1.place(x=25, y=15)
 
 label2 = Label(root, text="To make your custom URL", font=(
-    "montserrat", 13, "bold", "italic"), background="#C9DAEA", foreground="#22333B")
-label2.place(relx=0.22, rely=0.75, anchor=S)
+    "montserrat", 13, "bold", "italic"), background="#00001a", foreground="#FFFFFF")
+label2.place(relx=0.24, rely=0.75, anchor=S)
 
 
 # Creating entries using Entry class and position it with one of the geometry management method
